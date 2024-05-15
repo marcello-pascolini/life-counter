@@ -1,0 +1,10 @@
+@import "../../styles/partials/variable";
+
+.custom-button{
+    padding: 8px 18px;
+    font-size: $fs-20;
+    background: transparent;
+    border: 1px solid white;
+    color: $white;
+    width: 100%;
+}

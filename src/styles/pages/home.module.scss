@@ -1,0 +1,149 @@
+@import "../partials/variable";
+
+.home-container { 
+  background-color: $bg-color;
+  background: $bg-gradient;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  .home-step-1{
+    position: relative;
+    z-index: 10;
+    
+    .title-container{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 0px;
+
+      h1{
+        font-size: $fs-32;
+        color: $white;
+      }
+    }
+
+    .player-selection-container{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 20px 0px;
+
+      .player{
+        background-color: transparent;
+        border: none;
+        display: flex;
+        cursor: pointer;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        
+
+        .icon-container{
+          display: flex;
+          gap: 4px;
+        }
+
+        span{
+          font-size: $fs-28;
+          color: $white;
+          font-family: $secondaryText;
+        }
+      }
+    }
+  }
+
+  .home-step-2{
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 0px 32px;
+
+    .title-container{
+      h1{
+        font-size: $fs-32;
+        color: $white;
+        text-align: center;
+      }
+    }
+
+    .player-insert{
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+
+      &-element{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 20px;
+      
+
+        &-input{
+          width: 100%;
+        }
+
+        &-position{
+          span{
+            font-size: $fs-20;
+            color: $white;
+          }
+          
+        }
+      }
+
+      
+    }
+  }
+
+  .back-btn-box{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 24px;
+  }
+
+   
+}
+
+
+
+
+// LAYERS
+.layer-0{
+  display: block;
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100vw;
+ height: 100vh;
+ background-color: transparent;
+ background-size: 5px 5px, 5px 5px;
+ background-position:  -1px -1px, -1px -1px;
+ background-image: linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
+                   linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+ mix-blend-mode: difference;
+}
+
+
+.layer-animation {
+  clip-path: polygon(0 0, 100% 0, 100% .5em, 0 .5em);
+  animation: glitch 8s linear infinite;
+  transform: translatex(.1rem);
+ }
+ 
+ @keyframes glitch {
+  to {
+   clip-path: polygon(0 calc(100% - .5em), 100% calc(100% - .5em), 0 100%, 0 100%)
+  }
+ }
+
+

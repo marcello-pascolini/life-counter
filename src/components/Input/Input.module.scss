@@ -1,0 +1,30 @@
+@import "../../styles/partials/variable";
+
+.custom-input{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid $white;
+    background-color: transparent;
+    caret-color: $white; 
+    height: 40px;
+    color: $white;
+    font-size: $fs-16;
+    position: relative;
+    width: 100%;
+}
+
+
+.autocomplete-box{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background-color: $white;
+    font-family: $secondaryText;
+    padding: 20px;
+    position: absolute;
+    max-height: 120px;
+    overflow: scroll;
+    width: 75%;
+    z-index: 11;
+
+}

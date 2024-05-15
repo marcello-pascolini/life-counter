@@ -1,0 +1,42 @@
+// Colors
+$primary: #091f2c;
+$black: #000;
+$white: #ffffff;
+$grey: #808080;
+$error: #cc0000;
+$errorAplha: #cc00004d;
+$success: #4bb543;
+$pending: #ffc100;
+$bg-color: #2b1165;
+$fg-color: #f54171;
+
+// Font
+$primaryText: "Press Start 2P", system-ui;
+$secondaryText: "VT323", monospace;
+$body-font-size: 16px;
+$fs-32: 32px;
+$fs-28: 28px;
+$fs-24: 24px;
+$fs-20: 20px;
+$fs-18: 18px;
+$fs-16: 16px;
+$fs-14: 14px;
+$fs-12: 12px;
+$normal-fw: 400;
+$medium-fw: 500;
+$bold-fw: 700;
+
+$bg-gradient: linear-gradient(
+ 180deg,
+ $bg-color 0%,
+ rgba(26, 58, 130, 1) 37%,
+ rgba(171, 36, 177, 1) 69%,
+ $fg-color 100%
+);
+$fg-gradient: linear-gradient(
+ 0deg,
+ $bg-color 0%,
+ rgba(26, 58, 130, 1) 37%,
+ rgba(171, 36, 177, 1) 69%,
+ $fg-color 100%
+);
