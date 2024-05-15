@@ -1,9 +1,21 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import ViteSassPlugin from "vite-plugin-sass-dts";
+import sass from 'sass'
+
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(),ViteSassPlugin()],
-  base: "/life-counter"
+  plugins: [react()],
+  base: "/life-counter/",
+
+  css: {
+    preprocessorOptions: {
+      scss: {
+        implementation: sass,
+      },
+    },
+  },
 })
+
+
+

@@ -11,7 +11,7 @@ import VersusGrid from "../../components/VersusGrid/VersusGrid";
 const Home = () => {
 
     const [numPlayers, setNumPlayers] = useState(2)
-    const [currentStep, setCurrentStep] = useState(0)
+    const [currentStep, setCurrentStep] = useState(1)
     const [searchTerm, setSearchTerm] = useState('')
     const [autocompleteData, setAutocompleteData] = useState([])
     const [selectedCommanders, setSelectedCommanders] = useState<any>(
@@ -91,7 +91,7 @@ const Home = () => {
             <div className="home-container">
                 <div className="layer-0"></div>
                 <div className="layer-0 layer-animation"></div>
-
+                
 
                 {/* STEP 1 */}
                 {
