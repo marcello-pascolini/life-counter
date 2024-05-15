@@ -1,5 +1,5 @@
 import "./Input.module.scss";
-import React, { ChangeEvent, useState, useEffect } from "react";
+import { ChangeEvent, useState, useEffect } from "react";
 
 interface InputInterface {
     type: string,

@@ -1,5 +1,5 @@
 import "./Button.module.scss";
-import React, { ChangeEvent, useState, useEffect } from "react";
+
 
 interface ButtonInterface {
     type?: string,
@@ -7,7 +7,7 @@ interface ButtonInterface {
     onClick?: (value: any) => void;
 }
 
-const Button = ({type, label, onClick}: ButtonInterface) => {
+const Button = ({ label, onClick}: ButtonInterface) => {
 
    
     

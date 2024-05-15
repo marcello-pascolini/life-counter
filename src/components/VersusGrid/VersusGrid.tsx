@@ -1,7 +1,7 @@
 import "./VersusGrid.module.scss";
 
 interface VersusGridInterface {
-    selectedCards: {}[]
+    selectedCards?: {}[]
 }
 
 const VersusGrid = ({selectedCards}:VersusGridInterface) => {
