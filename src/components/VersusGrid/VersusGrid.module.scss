@@ -1,14 +1,13 @@
 .versus-grid-container{
-
+    width: 100vw;
     display: flex;
     flex-direction: column;
     height: 100vh; /* Altezza del viewport per occupare tutta la pagina */
-    position: absolute;
+    position: relative;
     overflow: scroll;
 
 
     .versus-grid-card{
-
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -17,7 +16,7 @@
             max-width: 100%;
             height: auto;
             width: 100%;
-            max-height: 228px;
+            max-height: 100%;
         }
     }
 }
