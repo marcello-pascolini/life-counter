@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "../../styles/pages/home.module.scss"
+// import "../../styles/pages/home.module.scss"
 import Icon from "../../components/Icon/Icon";
 import { faDiceD20 } from "@fortawesome/free-solid-svg-icons";
 import { faArrowLeftLong } from "@fortawesome/free-solid-svg-icons";

@@ -35,6 +35,6 @@
     "sass-loader": "^14.2.1",
     "typescript": "^5.2.2",
     "vite": "^5.2.0",
-    "vite-plugin-sass": "^0.1.0"
+    "vite-plugin-sass-glob-import": "^3.0.2"
   }
 }

@@ -1,6 +1,13 @@
-@import "./partials/reset";
-@import "./partials/variable";
-@import "./partials/structure";
+@import '../components/**/*.module.scss';
+@import "./pages/**/*.scss";
 
 
-@import "./pages/home.module.scss"
+
+// // @use "./partials/variables";
+// // @use "./partials/structure";
+
+// @import '../components/**/*.scss';
+
+
+
+
