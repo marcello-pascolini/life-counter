@@ -14,6 +14,7 @@ const Home = () => {
     const [currentStep, setCurrentStep] = useState(1)
     const [searchTerm, setSearchTerm] = useState('')
     const [autocompleteData, setAutocompleteData] = useState([])
+    const [commanderToStore, setCommanderToStore] = useState<any>([])
     const [selectedCommanders, setSelectedCommanders] = useState<any>(
         {
             0: "",
@@ -61,6 +62,8 @@ const Home = () => {
 
     const commanderSetter = async () => {
         const results = await searchCards(selectedCommanders);
+        setCurrentStep(3)
+        setCommanderToStore(results)
         console.log(results)
     }
     
@@ -164,7 +167,7 @@ const Home = () => {
                 {/* STEP 3 */}
                 {
                 currentStep === 3 && (
-                        <VersusGrid />
+                        <VersusGrid  selectedCards={commanderToStore}/>
                     )
 
                 }

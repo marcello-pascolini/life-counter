@@ -2,12 +2,6 @@
 
 body {
   font-family: $primaryText;
-  background-color: #e4e4e4;
-}
-
-::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
 }
 
 /* Track */
@@ -15,15 +9,23 @@ body {
   background: transparent;
 }
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: $primary;
-}
-
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   opacity: 0.8;
 }
+
+/* Nascondi thumb e scroll bar per WebKit */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* Nascondi thumb e scroll bar per Firefox */
+::-moz-scrollbar {
+  width: 0;
+  height: 0;
+}
+
 
 .hide-scrollbar {
   /* hide scrollbar but allow scrolling */
