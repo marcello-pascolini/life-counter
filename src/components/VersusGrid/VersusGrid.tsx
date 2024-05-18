@@ -10,7 +10,7 @@ const VersusGrid = ({selectedCards}:VersusGridInterface) => {
     return (
         <div className="grid">
 
-        { selectedCards?.map((card: any, index:number) => (
+        { selectedCards?.map((card: any) => (
                     <div className={`col`}>
                         <img src={card.image_uris.art_crop} alt={card.name} />
                     </div>
