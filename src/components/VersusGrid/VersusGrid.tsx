@@ -8,10 +8,10 @@ const VersusGrid = ({selectedCards}:VersusGridInterface) => {
     console.log(selectedCards)
 
     return (
-        <div className="versus-grid-container">
+        <div className="grid">
 
-        { selectedCards?.map((card: any) => (
-                    <div className="versus-grid-card">
+        { selectedCards?.map((card: any, index:number) => (
+                    <div className={`col`}>
                         <img src={card.image_uris.art_crop} alt={card.name} />
                     </div>
         ))}

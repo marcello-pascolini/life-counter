@@ -22,3 +22,33 @@
 }
 
 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Four columns */
+  height: 100vh; /* Full height of the viewport */
+
+  }
+  
+  .col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Hide any overflow */
+    position: relative; /* Position relative for overlay */
+
+    img{
+      object-fit: cover;
+      position: relative;
+      rotate: 90deg;
+      left: -50%;
+      top: 5%;
+    }
+  }
+  
+  
+
+  
+
+
+
+  
