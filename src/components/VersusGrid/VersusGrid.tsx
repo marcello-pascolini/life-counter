@@ -1,3 +1,4 @@
+
 import "./VersusGrid.module.scss";
 
 interface VersusGridInterface {
@@ -7,19 +8,17 @@ interface VersusGridInterface {
 const VersusGrid = ({selectedCards}:VersusGridInterface) => {
     console.log(selectedCards)
 
-    const gridColMap: any = {
-        0: { gridColumn: 1, gridRow: 1 },
-        1: { gridColumn: 2, gridRow: 1 },
-        2: { gridColumn: 1, gridRow: 2 },
-        3: { gridColumn: 2, gridRow: 2 },
-    }
+  
 
     return (
-        <div className="grid">
+        <div className="versus-grid-container">
+            {/* <div className="versus-icon">
+                <img src="/src/assets/icon/versus.png" alt="versus" ></img>
+            </div> */}
             { 
-                selectedCards?.map((card: any, index: number) => (
-                    <div className={`col`} >
-                            <div className="rotated-bg" style={{  backgroundImage: `url(${card.image_uris.art_crop})` }}></div>
+                selectedCards?.map((card: any, index) => (
+                    <div className={`versus-grid-card`} >
+                        <div className={`rotated-bg ${index % 2 == 0 ? 'rotate-left' : 'rotate-right'}` }style={{  backgroundImage: `url(${card.image_uris.art_crop})` }} />
                     </div>
             ))}
         </div>
