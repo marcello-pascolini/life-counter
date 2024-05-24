@@ -1,15 +1,15 @@
 
+import { useEffect, useState } from "react";
 import Counter from "../Counter/Counter";
 import "./VersusGrid.module.scss";
+import Grid from "../Grid/Grid";
 
 interface VersusGridInterface {
     selectedCards?: {}[]
 }
 
 const VersusGrid = ({selectedCards}:VersusGridInterface) => {
-    console.log(selectedCards)
 
-  
 
     return (
         <div className="versus-grid-container">
@@ -18,12 +18,10 @@ const VersusGrid = ({selectedCards}:VersusGridInterface) => {
             </div> */}
             { 
                 selectedCards?.map((card: any, index) => (
-                    <div className={`versus-grid-card`} >
-                        <div className={`rotated-bg ${index % 2 == 0 ? 'rotate-left' : 'rotate-right'}` }style={{  backgroundImage: `url(${card.image_uris.art_crop})` }}>
-                            <Counter />
-                        </div>
-                    </div>
-            ))}
+                    <Grid cardData={card} index={index}/>
+                ))
+            
+            }
         </div>
     )
 }

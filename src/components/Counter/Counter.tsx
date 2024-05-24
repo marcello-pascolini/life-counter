@@ -1,31 +1,28 @@
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Counter.module.scss";
 
 interface CounterInterface {
-    selectedCards?: {}[]
+    life: number;
+    onIncreaseLife: () => void;
+    onDecreaseLife: () => void;
+    showDelta: boolean;
+    delta: number;
 }
 
-const Counter = ({selectedCards}:CounterInterface) => {
-    console.log(selectedCards)
-    const [life, setLife] = useState(40); // Inizialmente la vita del giocatore è 20
+const Counter = ({ life, onIncreaseLife, onDecreaseLife, showDelta, delta }: CounterInterface) => {
 
-    const increaseLife = () => {
-      setLife(life + 1);
-    };
-  
-    const decreaseLife = () => {
-      setLife(life - 1);
-    };
-  
+ 
 
     return (
         <div className="life-counter">
-  
-            <button onClick={decreaseLife}>-</button>
+        <div className="points">
+            <button onClick={onDecreaseLife}>-</button>
             <span>{life}</span>
-            <button onClick={increaseLife}>+</button>
-      </div>
+            <button onClick={onIncreaseLife}>+</button>
+        </div>
+        {showDelta && <div className="delta">{delta > 0 ? `+${delta}` : delta}</div>}
+    </div>
     )
 }
 
