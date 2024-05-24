@@ -40,3 +40,12 @@ $fg-gradient: linear-gradient(
  rgba(171, 36, 177, 1) 69%,
  $fg-color 100%
 );
+
+
+$bg-90-gradient: linear-gradient(
+ 90deg,
+ $bg-color 0%,
+ rgba(26, 58, 130, 1) 40%,
+ rgba(171, 36, 177, 1) 60%,
+ $fg-color 100%
+);

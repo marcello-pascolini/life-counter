@@ -1,3 +1,6 @@
+@import "../../styles/partials/variable";
+
+
 .versus-grid-container {
   display: flex;
   height: 100vh;
@@ -14,6 +17,10 @@
 }
 
 .rotated-bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
   position: absolute;
   top: 50%;
   left: 50%;
@@ -21,6 +28,7 @@
   height: 50vw;
   background-size: cover;
   background-position: center;
+
 }
 
 
@@ -31,6 +39,30 @@
 
 .rotate-right{
   transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+.versus-icon{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  background: $bg-90-gradient;
+  border-top: 4px solid white;
+  border-bottom: 4px solid white;
+  padding: 8px 0px;
+  width: 100%;
+  // animation: gradientAnimation 3s ease infinite;
+  background-size: 400% 400%;
+
+
+  img{
+    width: 84px;
+    height: 84px;
+  }
+
 }
 
 
