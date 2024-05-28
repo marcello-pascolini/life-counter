@@ -1,5 +1,5 @@
 
-import { useEffect, useState } from "react";
+
 import "./Counter.module.scss";
 
 interface CounterInterface {
